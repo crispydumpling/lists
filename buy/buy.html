@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <script type="module" src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Buy</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo" data-logo></div>
+      <form action="" class="nav-edit-form transparent" data-nav-edit-form>
+        <input type="text" name="" class="nav-edit-input" data-nav-edit-input />
+        <input data-nav-edit-deadline type="date" name="" id="" />
+        <button class="btn" data-new-task="btn">Add</button>
+      </form>
+      <div class="nav-main">
+        <a href="https://crispydumpling.github.io/lists/quotes/quotes.html">Quotes</a>
+        <a href="https://crispydumpling.github.io/lists/todo/todo.html">Todo</a>
+        <a href="https://crispydumpling.github.io/lists/buy/buy.html" class="active">Buy</a>
+      </div>
+    </nav>
+    <div id="content"></div>
+
+    <template id="task-template">
+      <div class="task">
+        <input type="checkbox" data-task="checkbox" />
+        <label for="" data-task="label"><span data-task-text> </span><span class="task-tag" data-task-tag></span></label>
+        <span class="task-deadline" data-task-deadline></span>
+
+        <button class="ui-delete btn btn-sml" data-task="delete">⨯</button>
+      </div>
+    </template>
+
+    <template id="list-template">
+      <div class="list-container" data-list-container>
+        <div class="list-header">
+          <h3 data-list-header></h3>
+          <button class="ui-delete btn btn-sml" data-list-delete="btn">⨯</button>
+        </div>
+        <div class="list-body">
+          <div class="tasks" data-tasks></div>
+          <div class="new-task-creator">
+            <div class="new-task-prompt" data-new-task="prompt">
+              <div class="btn-create btn-sml" data-new-task="span">+</div>
+              <p data-new-task="p">Add task</p>
+            </div>
+            <form class="hide" action="" data-new-task="form">
+              <input data-new-task="input" type="text" class="new task" placeholder="e.g. @next running p2" />
+              <input data-new-task="deadline" type="date" name="" id="" />
+              <button class="btn" data-new-task="btn">Add</button>
+            </form>
+          </div>
+          <div class="new-sub-list-creator">
+            <div>
+              <button class="add-sub-list-btn btn" data-new-list="hover">Add Section</button>
+            </div>
+            <div>
+              <form action="" data-new-list="form" class="hide">
+                <input data-new-list="input" type="text" placeholder="e.g. waiting for" />
+                <button class="btn" data-new-list="btn">Add</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>
